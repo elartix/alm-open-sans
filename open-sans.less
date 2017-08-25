@@ -1,0 +1,39 @@
+/* OpenSans @font-face kit */
+@hash: 'dc56f0938c09c27a4156bb0f8f5176a2';
+@path: '../fonts';
+@FontName: 'Open Sans';
+@FontFileName: 'OpenSans';
+
+@sufix-list: '-ExtraBold', '-ExtraBoldItalic', '-Bold', '-BoldItalic', '-Semibold', '-SemiboldItalic', '-Regular', '-Italic', '-Light', '-LightItalic';
+@weight-list:    800,            800,            600,        600,           500,           500,            400,        400,      300,        300;
+@style-list:    normal,         italic,         normal,     italic,        normal,        italic,         normal,     italic,   normal,     italic;
+                                                 //700      //700           //600         //600
+
+.generator(@index: 1) when ( @index =< length(@sufix-list) ) {
+    // get item name
+    @suf: extract(@sufix-list, @index);
+    // name of font file
+    @name: "@{FontFileName}@{suf}";
+    // get font weight for this prefix (file and font-family)
+    @weight: extract(@weight-list, @index);
+    // get font style for this prefix (file and font-family)
+    @style: extract(@style-list, @index);
+
+    @font-face {
+        // font-family: e(`'@{name}'.toLowerCase()`);
+        // font-family: @name;
+        font-family: @FontName;
+        src: url('@{path}/@{name}.eot');
+        src:
+            url('@{path}/@{name}.eot?#iefix') format('embedded-opentype'),
+            url('@{path}/@{name}.woff') format('woff'),
+            url('@{path}/@{name}.ttf') format('truetype'),
+            url('@{path}/@{name}.svg#@{hash}') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+
+    // next iteration
+    .generator(@index + 1);
+}
+.generator();

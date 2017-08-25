@@ -1,0 +1,30 @@
+{
+  "name": "open-sans",
+  "version": "0.0.1",
+  "main": [
+    "css/open-sans.css",
+    "fonts/*.*"
+  ],
+  "authors": [ "Vladimir Mechkauskas <elartix@gmail.com>" ],
+  "description": "Open Sans Font Family Bower-ready (LESS-ready, and plain CSS-ready)",
+  "keywords": [
+    "open-sans",
+    "font",
+    "fontface",
+    "css",
+    "less",
+    "web",
+    "design"
+  ],
+  "license": [
+    "MIT",
+    "OFL"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

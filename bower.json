@@ -2,8 +2,7 @@
   "name": "alm-open-sans",
   "version": "0.0.1",
   "main": [
-    "css/open-sans.css",
-    "fonts/*.*"
+    "css/open-sans.css"
   ],
   "authors": [ "Vladimir Mechkauskas <elartix@gmail.com>" ],
   "description": "Open Sans Font Family Bower-ready (LESS-ready, and plain CSS-ready)",

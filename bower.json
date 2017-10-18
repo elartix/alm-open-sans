@@ -1,6 +1,6 @@
 {
   "name": "alm-open-sans",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": [
     "css/open-sans.css"
   ],
